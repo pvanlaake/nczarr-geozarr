@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nczarr-geozarr"
+version = "0.1.0"
+description = "Translate NCZarr v2 stores to Zarr v3 with the GeoZarr cs coordinate-set convention"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=1.24",
+    "fsspec>=2023.1",
+    "aiohttp>=3.9",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov",
+]
+
+[project.scripts]
+nczarr2geozarr = "nczarr2geozarr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nczarr2geozarr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+log_cli = true
+log_cli_level = "INFO"

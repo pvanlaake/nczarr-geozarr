@@ -1,0 +1,14 @@
+pyproject.toml
+nczarr2geozarr/axis_inference.py
+nczarr2geozarr/builder.py
+nczarr2geozarr/classifier.py
+nczarr2geozarr/cli.py
+nczarr2geozarr/models.py
+nczarr2geozarr/reader.py
+nczarr2geozarr/resolver.py
+nczarr2geozarr/writer.py
+nczarr_geozarr.egg-info/PKG-INFO
+nczarr_geozarr.egg-info/SOURCES.txt
+nczarr_geozarr.egg-info/dependency_links.txt
+nczarr_geozarr.egg-info/top_level.txt
+tests/test_pipeline.py
